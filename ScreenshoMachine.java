@@ -22,7 +22,7 @@ public class ScreenshoMachine {
 		StringBuilder apiUrl = new StringBuilder(apiBaseUrl);
 		apiUrl.append("key=").append(customerKey);
 		if (secretPhrase != null && secretPhrase.trim().length() > 0) {
-			apiUrl.append("&hash=").append(calculateHash(options.get("url") + secretPhrase + secretPhrase));
+			apiUrl.append("&hash=").append(calculateHash(options.get("url") + secretPhrase));
 		}
 		for (String key : options.keySet()) {
 			apiUrl.append("&").append(key).append("=").append(URLEncoder.encode(options.get(key), StandardCharsets.UTF_8.toString()));
