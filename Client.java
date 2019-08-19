@@ -26,6 +26,7 @@ public class Client {
 		options.put("format", "png");
 		options.put("cacheLimit", "0");
 		options.put("delay", "200");
+		options.put("zoom", "100");
 
 		String apiUrl = sm.generateApiUrl(options);
 		// put link to your html code

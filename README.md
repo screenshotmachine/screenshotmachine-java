@@ -24,8 +24,9 @@ Set other options to fulfill your needs:
     options.put("format", "png");
     options.put("cacheLimit", "0");
     options.put("delay", "200");
+    options.put("zoom", "100");
 ```
-More info about options can be found in our [API guide](https://www.screenshotmachine.com/apiguide.php).  
+More info about options can be found in our [API doc](https://www.screenshotmachine.com/api.php).  
 
  Sample code
 -----
@@ -45,6 +46,7 @@ More info about options can be found in our [API guide](https://www.screenshotma
     options.put("format", "png");
     options.put("cacheLimit", "0");
     options.put("delay", "200");
+    options.put("zoom", "100");
     
     String apiUrl = sm.generateApiUrl(options);
     // put link to your html code
