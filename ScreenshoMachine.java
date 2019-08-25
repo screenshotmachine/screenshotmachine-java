@@ -11,15 +11,24 @@ public class ScreenshoMachine {
 
 	private String customerKey;
 	private String secretPhrase;
-	private String apiBaseUrl = "http://api.screenshotmachine.com/?";
+	private String apiBaseUrl = "https://api.screenshotmachine.com/?";
+	private String pdfApiBaseUrl = "https://pdfapi.screenshotmachine.com/?";
 
 	public ScreenshoMachine(String customerKey, String secretPhrase) {
 		this.customerKey = customerKey;
 		this.secretPhrase = secretPhrase;
 	}
 
-	public String generateApiUrl(Map<String, String> options) throws NoSuchAlgorithmException, UnsupportedEncodingException {
-		StringBuilder apiUrl = new StringBuilder(apiBaseUrl);
+	public String generateScreenshotApiUrl(Map<String, String> options) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+		return generateUrl(apiBaseUrl, options);
+	}
+
+	public String generatePdfApiUrl(Map<String, String> options) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+		return generateUrl(pdfApiBaseUrl, options);
+	}
+
+	public String generateUrl(String baseUrl, Map<String, String> options) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+		StringBuilder apiUrl = new StringBuilder(baseUrl);
 		apiUrl.append("key=").append(customerKey);
 		if (secretPhrase != null && secretPhrase.trim().length() > 0) {
 			apiUrl.append("&hash=").append(calculateHash(options.get("url") + secretPhrase));
