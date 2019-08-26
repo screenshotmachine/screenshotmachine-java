@@ -13,7 +13,7 @@ import java.util.Map;
 public class ClientPdf {
 
 	public static void main(String[] args) throws MalformedURLException, IOException, NoSuchAlgorithmException {
-		String customerKey = "000000";
+		String customerKey = "PUT_YOUR_CUSTOMER_KEY_HERE";
 		String secretPhrase = "";//leave secret phrase empty, if not needed
 
 		ScreenshoMachine sm = new ScreenshoMachine(customerKey, secretPhrase);
