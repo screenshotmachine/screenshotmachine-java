@@ -40,17 +40,17 @@ More info about options can be found in our [Website screenshot API](https://www
     Map<String, String> options = new HashMap<String, String>();
     // mandatory parameter
     options.put("url", "https://www.google.com");
-    // all next parameters are optional, see our webtite screenshot API guide for more details
+    // all next parameters are optional, see our website screenshot API guide for more details
     options.put("dimension", "1366x768"); // or "1366xfull" for full length screenshot
     options.put("device", "desktop");
     options.put("format", "png");
     options.put("cacheLimit", "0");
     options.put("delay", "200");
     options.put("zoom", "100");
-    
+
     String apiUrl = sm.generateScreenshotApiUrl(options);
     // put link to your html code
-    System.out.println(apiUrl);    
+    System.out.println(apiUrl);
 ```
 Generated ```apiUrl```  link can be placed in ```<img>``` tag or used in your business logic later.
 

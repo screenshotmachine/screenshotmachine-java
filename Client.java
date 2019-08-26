@@ -21,7 +21,7 @@ public class Client {
 		Map<String, String> options = new HashMap<String, String>();
 		// mandatory parameter
 		options.put("url", "https://www.google.com");
-		// all next parameters are optional, see our API guide for more details
+		// all next parameters are optional, see our website screenshot API guide for more details
 		options.put("dimension", "1366x768"); // or "1366xfull" for full length screenshot
 		options.put("device", "desktop");
 		options.put("format", "png");
