@@ -34,9 +34,9 @@ public class Client {
 		System.out.println(apiUrl);
 
 		// or save screenshot as an image
-        URLConnection openConnection = new URL(apiUrl).openConnection();
-        openConnection.addRequestProperty("User-Agent", "Mozilla/4.0");
-        InputStream in = openConnection.getInputStream();
+		URLConnection openConnection = new URL(apiUrl).openConnection();
+		openConnection.addRequestProperty("User-Agent", "Mozilla/4.0");
+		InputStream in = openConnection.getInputStream();
 		String output = "out.png";
 		Files.copy(in, Paths.get(output), StandardCopyOption.REPLACE_EXISTING);
 		System.out.println("Screenshot saved as " + output);
